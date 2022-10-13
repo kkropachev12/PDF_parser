@@ -13,8 +13,10 @@ from meraki_dict_to_csv import dict_to_csv
 
 if __name__ == '__main__':
 
-    for i in range(5):
-
+    for i in range(22):
+        print(i)
+        if i == 16:
+            continue
         file_name = f'Meraki{i}'
         sheet = pars_excel(f'{file_name}.xlsx')
 
@@ -26,9 +28,9 @@ if __name__ == '__main__':
 
         dict_lengths = get_length(sheet)
 
-        dict_pricies = get_price(sheet)
-
         dict_products = get_product(sheet)
+
+        dict_pricies = get_price(sheet)
 
         dict_quantities = get_quantity(sheet)
 
