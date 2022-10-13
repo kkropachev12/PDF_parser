@@ -1,5 +1,6 @@
 import re
-
+from traceback import print_tb
+import time
 
 def get_length(sheet) -> dict:
 
@@ -11,7 +12,7 @@ def get_length(sheet) -> dict:
 
             if sheet[row][column].value != None:
                 if re.search(r'CM', str(sheet[row][column].value)) != None:
-                    while sheet[row + 1][column].value != None and re.search(r'\D+', str(sheet[row + 1][column].value)) == None:
+                    while row != sheet.max_row - 1:
                         dict_lengths['Length'].append(
                             sheet[row + 1][column].value)
                         row += 1
