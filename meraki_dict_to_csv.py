@@ -3,6 +3,7 @@ import csv
 
 def dict_to_csv(company_name: str, file_name: str, date: str, invoice: str, dict_lengths: dict, dict_pricies: dict, dict_products: dict, dict_quantities: dict, dict_total_prices: dict, dict_boxies: dict):
     # Создаем список с заголовками каждого столбца
+    print(company_name, file_name, date, invoice, dict_lengths, dict_pricies, dict_products, dict_quantities, dict_total_prices, dict_boxies)
     list_headers = [list(dict_boxies.keys())[0], list(dict_products.keys())[0], list(dict_lengths.keys())[
         0], list(dict_quantities.keys())[0], list(dict_pricies.keys())[0], list(dict_total_prices.keys())[0]]
     # Список значений каждой колонки
